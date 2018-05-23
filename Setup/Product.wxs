@@ -18,7 +18,8 @@
         <Directory Id="FProduct" Name="Store">
           <Component Id="CSetPriviliges" Guid="{00BE6F83-ACEB-4880-BDF5-D083A083435D}">
             <CreateFolder>
-              <util:PermissionEx GenericAll="yes" User="[GENERALUSER]" />
+              <util:PermissionEx User="SYSTEM" GenericAll="yes"/>
+              <util:PermissionEx User="Users" Domain="[LOCAL_MACHINE_NAME]" GenericRead="yes" Read="yes" GenericExecute="yes" ChangePermission="yes"/>
             </CreateFolder>
           </Component>
           <Component Id="CMakeConfig" Guid="{7A71E991-2DDA-4C1C-9BA6-1DDD48A77EF0}">
